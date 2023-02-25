@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            f2p
+        </title>
+        <body><h1>GFM Card Form</h1>
+            <form action="{% url 'card' %}" method="post">
+                {% csrf_token %}
+                {{form}}
+                <label for="admissionyear">Enter Year of Addmission :</label>
+                <select name="admissionyear" id="AdYr" >
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                </select><br><br>
+                <label for="Rd">Regular / DSE :</label>
+                <input type="radio" name="Rd" id="Reg" value="Regular" >
+                <label for="Rd">Regular</label>
+                <input type="radio" name="Rd" id="Des" value="DSE">
+                <label for="Rd">DSE</label><br><br>
+
+                <label for="Fname">Enter full name :</label>
+                <input type="text" name="fullname" id="fullname"><br><br>
+
+                <label for="address">Enter Current Address :</label>
+                <input type="text" rows="3" name="address" id="address" ><br><br>
+
+                <label for="address2">Enter Permanent Address :</label>
+                <input type="text" rows="3" name="address2" id="address2" ><br><br>
+
+                <label for="postalcode">Postal Code:</label>
+                <input type="text" name="postalcode" id="postalcode"><br><br>
+                
+                <label for="student-contact-number">Student Contact Number:</label>
+                <input type="text" id="student-contact-number" name="student-contact-number"><br><br>
+                
+                <label for="parent-contact-number">Parent Contact Number:</label>
+                <input type="text" id="parent-contact-number" name="parent-contact-number"><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                
+                <label for="dob">DOB:</label>
+                <input type="date" id="dob" name="dob"><br><br>
+                
+                <label for="religion">Religion:</label>
+                <input type="text" id="religion" name="religion"><br><br>
+                
+                <label for="cast">Cast:</label>
+                <input type="text" id="cast" name="cast"><br><br>
+                
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category"><br><br>
+                
+                <label for="blood-group">Blood Group:</label>
+                <input type="text" id="blood-group" name="blood-group"><br><br>
+                
+                <label for="bus-facility">Bus Facility (Yes/No):</label>
+                <input type="text" id="bus-facility" name="bus-facility"><br><br>
+                
+                <label for="hostel">Hostel (Yes/No):</label>
+                <input type="text" id="hostel" name="hostel"><br><br>
+                
+
+                <h3>Father's Job Profile: </h3>
+                    <label for="father-name">Name:</label>
+                    <input type="text" id="father-name" name="father-name"><br><br>
+                    
+                    <label for="father-occupation">Occupation:</label>
+                    <input type="text" id="father-occupation" name="father-occupation"><br><br>
+                    
+                    <label for="father-contact-number">Contact Number:</label>
+                    <input type="text" id="father-contact-number" name="father-contact-number"><br><br>
+                    
+                    <label for="father-job-location">Job Location:</label>
+                    <input type="text" id="father-job-location" name="father-job-location"><br><br>
+                    
+                    <label for="father-office-contact-number">Office Contact Number:</label>
+                    <input type="text" id="father-office-contact-number" name="father-office-contact-number"><br><br>
+                    
+
+                <h3>Mother's Job Profile:</h3>
+                    <label for="mother-name">Name:</label>
+                    <input type="text" id="mother-name" name="mother-name"><br><br>
+                    
+                    <label for="mother-occupation">Occupation:</label>
+                    <input type="text" id="mother-occupation" name="mother-occupation"><br><br>
+                    
+                    <label for="mother-contact-number">Contact Number:</label>
+                    <input type="text" id="mother-contact-number" name="mother-contact-number"><br><br>
+                    
+                    <label for="mother-job-location">Job Location:</label>
+                    <input type="text" id="mother-job-location" name="mother-job-location"><br><br>
+                    
+                    <label for="mother-office-contact-number">Office Contact Number:</label>
+                    <input type="text" id="mother-office-contact-number" name="mother-office-contact-number"><br><br>
+                    
+
+                <h3>Local Guardian Details:</h3>
+                    <label for="lg-name">Name:</label>
+                    <input type="text" id="lg-name" name="lg-name"><br><br>
+                    
+                    <label for="lg-contact-number">Contact Number:</label>
+                    <input type="text" id="lg-contact-number" name="lg-contact-number"><br><br>
+                    
+                    <label for="lg-location">Address:</label>
+                    <input type="text" id="lg-location" name="lg-location"><br><br>
+
+                    
+                        <h2>SSC Information</h2>
+                        <label for="ssc-school">School / College Name:</label>
+                        <input type="text" id="ssc-school" name="ssc-school"><br><br>
+                        
+                        <label for="ssc-passing-year">Passing Year:</label>
+                        <input type="text" id="ssc-passing-year" name="ssc-passing-year"><br><br>
+                        
+                        <label for="ssc-percentage">Percentage:</label>
+                        <input type="text" id="ssc-percentage" name="ssc-percentage"><br><br>
+                        
+                        <h2>HSC Information</h2>
+                        <label for="hsc-school">School / College Name:</label>
+                        <input type="text" id="hsc-school" name="hsc-school"><br><br>
+                        
+                        <label for="hsc-passing-year">Passing Year:</label>
+                        <input type="text" id="hsc-passing-year" name="hsc-passing-year"><br><br>
+                        
+                        <label for="hsc-percentage">Percentage:</label>
+                        <input type="text" id="hsc-percentage" name="hsc-percentage"><br><br>
+                        
+                        <h2>Diploma Information</h2>
+                        <label for="diploma-school">School / College Name:</label>
+                        <input type="text" id="diploma-school" name="diploma-school"><br><br>
+                        
+                        <label for="diploma-passing-year">Passing Year:</label>
+                        <input type="text" id="diploma-passing-year" name="diploma-passing-year"><br><br>
+                        
+                        <label for="diploma-percentage">Percentage:</label>
+                        <input type="text" id="diploma-percentage" name="diploma-percentage"><br><br>
+                        
+                        <h2>First Year / Diploma Final Year Information</h2>
+                        <h3>Semester 1</h3>
+                        <label for="fy-sem1-total-marks">Total Marks:</label>
+                        <input type="text" id="fy-sem1-total-marks" name="fy-sem1-total-marks"><br><br>
+                        
+                        <label for="fy-sem1-percentage">Percentage:</label>
+                        <input type="text" id="fy-sem1-percentage" name="fy-sem1-percentage"><br><br>
+                        
+                        <label for="fy-sem1-backlog">Backlog (if any):</label>
+                        <input type="text" id="fy-sem1-backlog" name="fy-sem1-backlog"><br><br>
+                        
+                        <label for="fy-sem1-remark">Remark:</label>
+                        <input type="text" id="fy-sem1-remark" name="fy-sem1-remark"><br><br>
+                        
+                        <h3>Semester 2</h3>
+                        <label for="fy-sem2-total-marks">Total Marks:</label>
+                        <input type="text" id="fy-sem2-total-marks" name="fy-sem2-total-marks"><br><br>
+                        
+                        <label for="fy-sem2-percentage">Percentage:</label>
+                        <input type="text" id="fy-sem2-percentage" name="fy-sem2-percentage"><br><br>
+                        
+                        <label for="fy-sem2-backlog">Backlog (if any):</label>
+                        <input type="text" id="fy-sem2-backlog" name="fy-sem2-backlog"><br><br>
+                        
+                        <label for="fy-sem2-remark">Remark:</label>
+                        <input type="text" id="fy-sem2-remark" name="fy-sem2-remark"><br><br>
+                      
+
+                <input type="submit" name="submit">
+            </form>
+        </body>
+    </head>
+</html>
